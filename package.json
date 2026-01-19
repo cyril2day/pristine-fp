@@ -1,0 +1,110 @@
+{
+  "name": "pristine-fp",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "A collection of functional programming utilities inspired by Underscore and Functional JavaScript",
+  "keywords": [
+    "functional",
+    "utilities",
+    "underscore",
+    "fp",
+    "typescript"
+  ],
+  "license": "MIT",
+  "author": "psi <cylonsido@gmail.com>",
+  "credit": "Inspired by Underscore.js, Functional JavaScript by Michael Fogus, and JavaScript Allongé by Reg Braithwaite.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cyril2day/pristine-fp"
+  },
+  "homepage": "https://github.com/cyril2day/pristine-fp#readme",
+  "bugs": "https://github.com/cyril2day/pristine-fp/issues",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "build-only": "vite build",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint . --fix --cache",
+    "build:lib": "vite build --mode lib",
+    "prepublishOnly": "npm run build:lib"
+  },
+  "main": "./dist/pristine-fp.cjs.js",
+  "module": "./dist/pristine-fp.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/pristine-fp.es.js",
+      "require": "./dist/pristine-fp.cjs.js"
+    },
+    "./core": {
+      "types": "./dist/core/index.d.ts",
+      "import": "./dist/core/index.es.js",
+      "require": "./dist/core/index.cjs.js"
+    },
+    "./higherOrder": {
+      "types": "./dist/higherOrder/index.d.ts",
+      "import": "./dist/higherOrder/index.es.js",
+      "require": "./dist/higherOrder/index.cjs.js"
+    },
+    "./collections": {
+      "types": "./dist/collections/index.d.ts",
+      "import": "./dist/collections/index.es.js",
+      "require": "./dist/collections/index.cjs.js"
+    },
+    "./objects": {
+      "types": "./dist/objects/index.d.ts",
+      "import": "./dist/objects/index.es.js",
+      "require": "./dist/objects/index.cjs.js"
+    },
+    "./validation": {
+      "types": "./dist/validation/index.d.ts",
+      "import": "./dist/validation/index.es.js",
+      "require": "./dist/validation/index.cjs.js"
+    },
+    "./underscore": {
+      "types": "./dist/underscore/index.d.ts",
+      "import": "./dist/underscore/index.es.js",
+      "require": "./dist/underscore/index.cjs.js"
+    },
+    "./vue": {
+      "types": "./dist/vue/index.d.ts",
+      "import": "./dist/vue/index.es.js",
+      "require": "./dist/vue/index.cjs.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "sideEffects": false,
+  "peerDependencies": {
+    "vue": "^3.5.26"
+  },
+  "dependencies": {
+    "underscore": "^1.13.7"
+  },
+  "devDependencies": {
+    "@tsconfig/node24": "^24.0.3",
+    "@types/jsdom": "^27.0.0",
+    "@types/node": "^24.10.4",
+    "@types/underscore": "^1.13.0",
+    "@vitest/eslint-plugin": "^1.6.5",
+    "@vue/eslint-config-typescript": "^14.6.0",
+    "eslint": "^9.39.2",
+    "jiti": "^2.6.1",
+    "jsdom": "^27.4.0",
+    "npm-run-all2": "^8.0.4",
+    "terser": "^5.46.0",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.0",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^4.0.16"
+  }
+}
