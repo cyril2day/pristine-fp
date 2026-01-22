@@ -9,6 +9,8 @@
 export {
   result,
   reduce,
+  map,
+  filter,
   every,
   has,
   isObject,
