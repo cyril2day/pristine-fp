@@ -1,6 +1,6 @@
 {
   "name": "pristine-fp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "type": "module",
   "description": "A collection of functional programming utilities inspired by Underscore and Functional JavaScript",
